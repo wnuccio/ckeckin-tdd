@@ -13,4 +13,13 @@ public class CheckInTest {
 
         assertEquals("Passengers not specified", result);
     }
+
+    @Test
+    void return_airline_not_specified() {
+        CheckInService checkInService = new CheckInService();
+
+        String result = checkInService.doCheckInFor(1, "");
+
+        assertEquals("Airline not specified", result);
+    }
 }
